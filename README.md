@@ -2,6 +2,8 @@
 
 Python driver and Blinka-compatible I2C adapter for the **DeVaSys USB-I2C/IO / USB-I2CCIO** board.
 
+http://www.devasys.com/usbi2cio.htm
+
 This project allows a Windows PC to control I2C devices using the DeVaSys USB-I2C/IO board and the vendor `UsbI2cIo.dll`.
 
 It provides two main interfaces:
