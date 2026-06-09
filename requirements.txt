@@ -1,0 +1,5 @@
+adafruit-blinka
+adafruit-circuitpython-busdevice
+pytest
+black
+ruff

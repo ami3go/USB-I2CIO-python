@@ -1,0 +1,46 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "devasys-usbi2cio"
+version = "0.1.0"
+description = "Python driver and Blinka-compatible adapter for DeVaSys USB-I2C/IO boards"
+readme = "README.md"
+requires-python = ">=3.9"
+authors = [
+    { name = "Alexandr Chasnyk" }
+]
+license = { text = "MIT" }
+keywords = ["devasys", "i2c", "usb-i2c", "blinka", "circuitpython", "pcf8574"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Manufacturing",
+    "Operating System :: Microsoft :: Windows",
+    "Programming Language :: Python :: 3",
+    "Topic :: Software Development :: Embedded Systems",
+    "Topic :: System :: Hardware",
+]
+
+[project.optional-dependencies]
+blinka = [
+    "adafruit-blinka",
+    "adafruit-circuitpython-busdevice",
+]
+dev = [
+    "pytest",
+    "black",
+    "ruff",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.black]
+line-length = 100
+target-version = ["py39"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py39"

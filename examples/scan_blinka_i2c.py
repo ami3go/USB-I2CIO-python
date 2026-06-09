@@ -1,16 +1,14 @@
+"""Blinka-compatible DeVaSys USB-I2C/IO scan example."""
+
 import time
+
 from devasys_usbi2cio import DevasysBlinkaI2C
 
 
-def main():
-    i2c = DevasysBlinkaI2C(
-        dll_path="UsbI2cIo.dll",
-        instance=0,
-    )
+def main() -> None:
+    i2c = DevasysBlinkaI2C(dll_path="UsbI2cIo.dll", instance=0)
 
     try:
-        print("Locking I2C bus...")
-
         while not i2c.try_lock():
             time.sleep(0.01)
 
@@ -24,7 +22,6 @@ def main():
                     print(f"  0x{addr:02X}")
             else:
                 print("No I2C devices found.")
-
         finally:
             i2c.unlock()
 
