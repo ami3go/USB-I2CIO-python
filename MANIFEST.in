@@ -1,0 +1,7 @@
+include README.md
+include LICENSE
+include requirements.txt
+include pyproject.toml
+recursive-include docs *.md
+recursive-include examples *.py
+recursive-include src/devasys_usbi2cio py.typed
