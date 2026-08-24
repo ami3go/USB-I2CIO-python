@@ -3,8 +3,8 @@
 import argparse
 import sys
 
-from .driver import DevasysUsbI2cIo
-from .errors import DevasysI2CError
+from driver import DevasysUsbI2cIo
+from errors import DevasysI2CError
 
 
 def scan_main(argv=None) -> int:
