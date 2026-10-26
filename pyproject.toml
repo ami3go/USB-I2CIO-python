@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "devasys-usbi2cio"
+version = "0.1.0"
+description = "Python driver and Blinka-compatible I2C adapter for the DeVaSys USB-I2C/IO board (Windows, UsbI2cIo.dll)"
+readme = "README.md"
+requires-python = ">=3.8"
+license = {file = "LICENSE"}
+authors = [{name = "ami3go", email = "alexandr.chasnyk@gmail.com"}]
+classifiers = [
+    "Operating System :: Microsoft :: Windows",
+    "Topic :: System :: Hardware",
+]
+
+[project.urls]
+Homepage = "https://github.com/ami3go/USB-I2CIO-python"
+
+[tool.setuptools]
+py-modules = ["devasys_usbi2cio"]
